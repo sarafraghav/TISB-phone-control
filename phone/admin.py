@@ -7,5 +7,5 @@ admin.site.site_header = 'TISB Phone Administration'
 @admin.register(signin)
 class invoiceAdmin(admin.ModelAdmin):
     list_display = ("cid",'signin','signout','signedin')
-    list_filter = ("cid",)
+    list_filter = ("cid",'signedin')
     search_fields = ("cid__startswith",)
